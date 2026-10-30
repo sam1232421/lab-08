@@ -49,7 +49,7 @@ class WizardTest {
     @Test
     fun train_enoughMana_increasesSpellPowerAndDecreasesMana() {
         val wizard = Wizard("BOB", mana = 10, spellPower = 5)
-
+//wizard has more then 5 mana test as 10>5
         wizard.train()
 
         assertEquals(6, wizard.spellPower)
@@ -59,7 +59,7 @@ class WizardTest {
     @Test
     fun train_notEnoughMana_statsRemainUnchanged() {
         val wizard = Wizard("NJohn", mana = 3, spellPower = 5)
-
+//wizard less mana then 5 as 3<5 for both test of train
         wizard.train()
 
         assertEquals(5, wizard.spellPower)
